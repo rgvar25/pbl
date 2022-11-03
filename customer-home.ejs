@@ -1,0 +1,15 @@
+<h1>Customer logged in</h1>
+<a href="/customer-home/<%=id%>/orders"><button type="button" name="button">Orders</button></a>
+<ul>
+  <% products.forEach((product) => {  %>
+    <li>
+      <p>
+        <%= product.productName%>
+      </p>
+      <p>
+        <%= product.productPrice %>
+      </p>
+      <a href="/customer-home/<%=id%>/buy-product/<%= product._id %>"><button type="button" name="button">Buy</button></a>
+     </li>
+  <% }) %>
+</ul>

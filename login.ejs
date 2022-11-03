@@ -1,0 +1,22 @@
+
+
+
+<form action="/login/<%=user%>" method="post">
+  <input type="text" name="username" placeholder="username" value="">
+  <input type="password" name="password" placeholder="password" value="">
+  <% if(noUser=== 1){%>
+    <p>
+      User doesnt exists, sign up!!
+    </p>
+<%  }else if (wrongPass === 1) {%>
+    <p>
+      Wrong password
+    </p>
+<%  } else if(userExist === 1){ %>
+  <p>
+    User already exists, log in!!
+  </p>
+<%}%>
+  <button type="submit" name="button">Login</button>
+  <a href="/sign-up/<%=user%>">Sign up</a>
+</form>
